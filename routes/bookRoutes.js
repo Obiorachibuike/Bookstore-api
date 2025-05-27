@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const bookController = require('../contollers/bookController');
 
-router.get('/books', bookController.getBooks);
+router.get('/book', bookController.getBooks);
 router.post('/books', bookController.addBook);
 router.put('/books/:id', bookController.updateBook);
 router.delete('/books/:id', bookController.deleteBook);
