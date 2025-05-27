@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1",
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt",
+    "price": 39.99,
+    "publishedDate": "1999-10-30"
+  },
+  {
+    "id": "2",
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "price": 34.95,
+    "publishedDate": "2008-08-11"
+  },
+  {
+    "id": "3",
+    "title": "You Don't Know JS Yet",
+    "author": "Kyle Simpson",
+    "price": 29.99,
+    "publishedDate": "2020-01-28"
+  },
+  {
+    "id": "4",
+    "title": "Eloquent JavaScript",
+    "author": "Marijn Haverbeke",
+    "price": 24.99,
+    "publishedDate": "2018-12-04"
+  },
+  {
+    "id": "5",
+    "title": "JavaScript: The Good Parts",
+    "author": "Douglas Crockford",
+    "price": 22.00,
+    "publishedDate": "2008-05-15"
+  }
+]
