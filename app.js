@@ -18,7 +18,7 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTop
 require('dotenv').config();
 const mongoose = require('mongoose');
 
-console.log("Connecting to MongoDB at:", process.env.MONGO_URI);
+console.log("Connecting to MongoDB at:", process.env.MONGO_URI || "mongodb+srv://User:Fanthom456world@cluster0.paigpn8.mongodb.net/bookstore_api?retryWrites=true&w=majority");
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB connected"))
