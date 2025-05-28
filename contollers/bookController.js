@@ -4,6 +4,11 @@ const Book = require('../models/book');
 exports.getBooks = async (req, res) => {
   try {
     const books = await Book.find();
+
+    if (books.length === 0) {
+      return res.status(404).json({ message: 'No books found' });
+    }
+
     res.json(books);
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch books' });
