@@ -4,11 +4,9 @@ const Book = require('../models/book');
 exports.getBooks = async (req, res) => {
   try {
     const books = await Book.find();
-
     if (books.length === 0) {
       return res.status(404).json({ message: 'No books found' });
     }
-
     res.json(books);
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch books' });
@@ -27,7 +25,11 @@ exports.addBook = async (req, res) => {
 
 exports.updateBook = async (req, res) => {
   try {
-    const book = await Book.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    const book = await Book.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
     if (!book) return res.status(404).json({ error: 'Book not found' });
     res.json(book);
   } catch (err) {
