@@ -1,5 +1,5 @@
 // app.js
-require('dotenv').config();
+
 const express = require('express');
 const mongoose = require('mongoose');
 const bookRoutes = require('./routes/bookRoutes');
@@ -7,7 +7,19 @@ const bookRoutes = require('./routes/bookRoutes');
 const app = express();
 app.use(express.json());
 app.use('/api', bookRoutes);
-
+/*
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => app.listen(5000, () => console.log("Server running on port 5000")))
   .catch(err => console.log(err));
+
+*/
+
+
+require('dotenv').config();
+const mongoose = require('mongoose');
+
+console.log("Connecting to MongoDB at:", process.env.MONGO_URI);
+
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB connected"))
+  .catch(err => console.error("MongoDB connection error:", err));
